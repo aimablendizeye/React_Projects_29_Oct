@@ -1,33 +1,38 @@
-import plus  from './assets/add.png'
-import pen  from './assets/edit-text.png'
-import create  from './assets/magic-wand.png'
-import plan from './assets/planning.png'
+
+
+
+import {Pencil,CornerDownRight,Orbit,Plus,ChevronDown,Mic} from 'lucide-react'
 
 function Section () {
 
 
     return (
         <div className='ml-72 h-full flex flex-col item-center justify-center gap-4 absolute top-0'>
-            <h1 className='px-20 text-3xl font-bold'>Where Should we Start?</h1>
+            <h1 className='px-20 text-2xl font-bold'>Where should we start?</h1>
             <div className='text-white bg-gray-600 flex  w-fit px-40 py-3 rounded-3xl cursor-text '>
-                <img src={plus} alt="adding icon" className='w-6 absolute left-2 cursor-pointer' />
+                <Plus className='w-6 h-6 absolute left-2  text-white' />
                 <p className='absolute left-9'>Ask Gemini</p>
-                <p className='ml-44'>Gemini</p>
-                <img src="" alt="" />
-                <img src="" alt="" />
+                <div className='flex flex-col'>
+
+                < p className='ml-44'>Gemini <span className='text-gray-400'>Auto</span></p>
+                <ChevronDown className='w-6 h-6 absolute right-32  text-white ' />
+                <Mic className='w-6 h-6 absolute right-12  text-white' />
+
+                </div>
+               
             </div>
 
-            <div className='flex flex-col mt-4 gap-5'>
+            <div className='flex flex-col mt-4 gap-3 ml-8'>
             <div className='flex  gap-4'>
-                <img src={pen} alt="" className='w-5' />
+                <Pencil className='w-4 h-4'/>
                 <p>Write a letter to my future self</p>
             </div>
             <div className='flex  gap-4'>
-                 <img src={create} alt="" className='w-5'/>
+                 <CornerDownRight className='w-4 h-4'/>
                 <p>Create an image of a floating astronant</p>
             </div>
             <div className='flex  gap-4'>
-                 <img src={plan} alt="" className='w-5' />
+               <Orbit className='w-4 h-4'/>
                 <p>Plan a bdy party that matches my style</p>
             </div>
 
