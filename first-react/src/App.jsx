@@ -1,14 +1,13 @@
 import Header  from "./Header"
 import Footer from "./Footer"
 import Section from './Section'
-import Card from "./Card"
-import Student  from "./Students"
+
 
 function App() {
 
   return  (
     <>
-    <div className="min-h-screen bg-gray-700 text-white">
+    <div className="min-h-screen bg-[radial-gradient(ellipse_at_center,#1e3a8a_0%,#090d16_55%,#040609_100%)] text-white">
     <Header/>
     <Section/>
     <Footer/>
