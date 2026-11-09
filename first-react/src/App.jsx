@@ -1,19 +1,26 @@
 import Header  from "./Header"
 import Footer from "./Footer"
 import Section from './Section'
+import TodolistApp from "./TodolistApp"
 
 
 function App() {
 
   return  (
+
+
     <>
-    <div className="min-h-screen bg-[radial-gradient(ellipse_at_center,#1e3a8a_0%,#090d16_55%,#040609_100%)] text-white">
+     <TodolistApp/>
+    {/* <div className="min-h-screen bg-[radial-gradient(ellipse_at_center,#1e3a8a_0%,#090d16_55%,#040609_100%)] text-white">
     <Header/>
     <Section/>
     <Footer/>
 
-    </div>
+    </div> */}
     
+
+
+
      {/* <Card/>
      <Card/>
       */}
