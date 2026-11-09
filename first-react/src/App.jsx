@@ -3,6 +3,10 @@ import Footer from "./Footer"
 import Section from './Section'
 import TodolistApp from "./TodolistApp"
 
+import TrelloHeader from "./TrelloHeader"
+import TrelloSection from "./TrelloSection"
+import TrelloFooter from "./TrelloFooter"
+
 
 function App() {
 
@@ -10,7 +14,14 @@ function App() {
 
 
     <>
-     <TodolistApp/>
+    <div className="bg-[#1F1F21] text-white min-h-screen">
+     <TrelloHeader/>
+     <TrelloSection/>
+     <TrelloFooter/>
+
+    </div>
+    
+     {/* <TodolistApp/> */}
     {/* <div className="min-h-screen bg-[radial-gradient(ellipse_at_center,#1e3a8a_0%,#090d16_55%,#040609_100%)] text-white">
     <Header/>
     <Section/>
