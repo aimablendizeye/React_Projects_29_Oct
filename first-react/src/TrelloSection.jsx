@@ -35,12 +35,12 @@ function TrelloSection () {
 
             <div className='absolute top-36 left-90 flex gap-3 '>
                 <button className='text-5xl text-black bg-[#E56952] px-4 py-2 rounded-sm'>A</button>
-                <div className='flex flex-col gap-3'>
+                <div className='flex flex-col gap-1'>
                     <h2>Aimable Ndizeye's workspace</h2>
 
-                    <div className='flex gap-2 text-gray-400'>
-                        <LockKeyhole  className='w-5 h-5 '/>
-                        <p>Privacy</p>
+                    <div className='flex gap-1 text-gray-400'>
+                        <LockKeyhole  className='w-4 h-4 '/>
+                        <p className='text-sm'>Privacy</p>
                     </div>
   
                 </div>
