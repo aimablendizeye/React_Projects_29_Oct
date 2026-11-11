@@ -5,7 +5,7 @@
 function TrelloHeader () {
 
     return (
-        <div className='flex gap-3 absolute top-4 '>
+        <div className='flex gap-3 absolute text-white  '>
             <div className='flex gap-3 pt-2 pl-2 '>
                 <LayoutGridCircles className='w-5 h-5'/>
                 <img src={trello} className='w-5 h-5' />
@@ -18,30 +18,27 @@ function TrelloHeader () {
                 <button className='bg-[#669DF1] px-4 py-1 rounded-md text-black'>Create</button>
             </div>
 
-            <div className='flex gap-3 pl-40 '>
+            <div className='flex gap-3 pl-36 '>
 
-            <button className='hover:bg-gray-500 w-fit rounded-full transition cursor-pointer  '>
+            <button className='hover:bg-gray-600 w-fit rounded  px-1 transition cursor-pointer  '>
             <Share2 className='w-4 h-4 '/>
             </button>
 
-            <button className='hover:bg-gray-500 w-fit rounded-full transition cursor-pointer  '>
+            <button className='hover:bg-gray-600 w-fit rounded  px-1 transition cursor-pointer  '>
             <Bell className='w-4 h-4 '/>
             </button>
 
-            <button className='hover:bg-gray-500 w-fit rounded-full transition cursor-pointer  '>
+            <button className='hover:bg-gray-600 w-fit rounded  px-1 transition cursor-pointer  '>
             <Info className='w-4 h-4 '/>
             </button>
 
-            <button className='hover:bg-gray-500 w-fit rounded-full transition cursor-pointer absolute -right-8 top-1  bg-[#00A3BF]'>
+            <button className='hover:bg-gray-600 w-fit rounded-full  px-1 transition cursor-pointer absolute -right-8 top-1  bg-[#00A3BF]'>
             <CircleUser  className='w-5 h-6   '/>
             </button>
 
             </div>
 
-            
-
-          
-            
+        
         </div>
     )
 }

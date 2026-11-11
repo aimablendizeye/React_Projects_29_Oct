@@ -80,35 +80,35 @@ function TrelloSection () {
             <div className='flex gap-4'>
 
               <div className='relative'>
-                <img src={city1} alt="" className='w-50 h-30 rounded-sm shadow-md' />
+                <img src={city1} alt="" className='w-50 h-30 rounded-t-sm shadow-md' />
 
-                <div className=' absolute top-20 rounded-sm bg-[#1F1F21] w-50 h-10 '>
-                      <p className='pl-4 pt-2 text-sm'>Aimable Ndizeye</p>
+                <div className=' absolute top-20  bg-[#1F1F21] w-50 h-10 '>
+                      <p className='pl-4 pt-2 text-sm'>React Project</p>
                 </div>
              </div>
 
 
              <div className='relative'>
-                <img src={city2} alt="" className='w-50 h-30 rounded-sm shadow-md' />
+                <img src={city2} alt="" className='w-50 h-30 rounded-t-sm shadow-md' />
 
-                <div className=' absolute top-20 rounded-sm bg-[#1F1F21] w-50 h-10 '>
-                      <p className='pl-4 pt-2 text-sm'>Aimable Ndizeye</p>
+                <div className=' absolute top-20  bg-[#1F1F21] w-50 h-10 '>
+                      <p className='pl-4 pt-2 text-sm'>Website Project</p>
                 </div>
             </div>
 
              <div className='relative'>
-                <img src={city1} alt="" className='w-50 h-30 rounded-sm shadow-md' />
+                <img src={city1} alt="" className='w-50 h-30 rounded-t-sm shadow-md' />
 
-                <div className=' absolute top-20 rounded-sm bg-[#1F1F21] w-50 h-10 '>
-                      <p className='pl-4 pt-2 text-sm'>Aimable Ndizeye</p>
+                <div className=' absolute top-20  bg-[#1F1F21] w-50 h-10 '>
+                      <p className='pl-4 pt-2 text-sm'>TypeScript learning </p>
                 </div>
             </div>
 
               <div className='relative'>
-                <img src={city2} alt="" className='w-50 h-30 rounded-sm shadow-md' />
+                <img src={city2} alt="" className='w-50 h-30 rounded-t-sm shadow-md' />
 
-                <div className=' absolute top-20 rounded-sm bg-[#1F1F21] w-50 h-10 '>
-                      <p className='pl-4 pt-2 text-sm'>Aimable Ndizeye</p>
+                <div className=' absolute top-20  bg-[#1F1F21] w-50 h-10 '>
+                      <p className='pl-4 pt-2 text-sm'>Final Project</p>
                 </div>
             </div>
 
