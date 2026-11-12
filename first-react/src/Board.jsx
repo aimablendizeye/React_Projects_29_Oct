@@ -12,8 +12,8 @@ import {Kanban,
         Inbox,
       NotepadText,
        Dices,
-     Plus,
-    SquareKanbanPlus} from 'lucide-react'
+      Plus,
+     SquareKanbanPlus} from 'lucide-react'
 import Dissert from './assets/Dissert.png'
 import TrelloHeader from "./TrelloHeader"
 
@@ -84,7 +84,6 @@ function Board () {
             </div>
             
             <p className='cursor-pointer rounded px-2 py-1 mr-2 transition bg-gray-500 hover:text-white'>Code Wars</p>
-            {/* <p className='cursor-pointer rounded px-2 py-1 mr-2 transition bg-gray-500 hover:text-white'>React</p> */}
 
             <div className='flex gap-2'>
                  <Plus className='w-5 h-5'/>

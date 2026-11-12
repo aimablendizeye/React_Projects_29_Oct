@@ -9,7 +9,7 @@ import {SquareKanbanPlus,
  import city1 from './assets/city1.png' 
  import city2 from './assets/city2.png'      
 
-function TrelloSection () {
+function TrelloSection ({ onFeatureClick }) {
         
 
     return (
@@ -72,7 +72,7 @@ function TrelloSection () {
 
         </div>
 
-        <div className='flex flex-col gap-2'>
+        <div className='flex flex-col gap-2 cursor-pointer'>
             <div className='flex gap-2'>
                  <User className='w-5 h-5'/>
                  <p>Your Boards</p>
@@ -80,7 +80,7 @@ function TrelloSection () {
             <div className='flex gap-4'>
 
               <div className='relative'>
-                <img src={city1} alt="" className='w-50 h-30 rounded-t-sm shadow-md' />
+                <img src={city1} alt="" onClick={onFeatureClick} className='w-50 h-30 rounded-t-sm shadow-md' />
 
                 <div className=' absolute top-20  bg-[#1F1F21] w-50 h-10 '>
                       <p className='pl-4 pt-2 text-sm'>React Project</p>
@@ -89,7 +89,7 @@ function TrelloSection () {
 
 
              <div className='relative'>
-                <img src={city2} alt="" className='w-50 h-30 rounded-t-sm shadow-md' />
+                <img src={city2} alt="" onClick={onFeatureClick} className='w-50 h-30 rounded-t-sm shadow-md' />
 
                 <div className=' absolute top-20  bg-[#1F1F21] w-50 h-10 '>
                       <p className='pl-4 pt-2 text-sm'>Website Project</p>
@@ -97,7 +97,7 @@ function TrelloSection () {
             </div>
 
              <div className='relative'>
-                <img src={city1} alt="" className='w-50 h-30 rounded-t-sm shadow-md' />
+                <img src={city1}  alt="" onClick={onFeatureClick} className='w-50 h-30 rounded-t-sm shadow-md' />
 
                 <div className=' absolute top-20  bg-[#1F1F21] w-50 h-10 '>
                       <p className='pl-4 pt-2 text-sm'>TypeScript learning </p>
@@ -105,23 +105,14 @@ function TrelloSection () {
             </div>
 
               <div className='relative'>
-                <img src={city2} alt="" className='w-50 h-30 rounded-t-sm shadow-md' />
+                <img src={city2} alt="" onClick={onFeatureClick} className='w-50 h-30 rounded-t-sm shadow-md' />
 
                 <div className=' absolute top-20  bg-[#1F1F21] w-50 h-10 '>
                       <p className='pl-4 pt-2 text-sm'>Final Project</p>
                 </div>
             </div>
-
-        
-
-
-            </div>
-
-           
-
-    
-           
-
+       
+           </div>         
         </div>
 
         </div>

@@ -3,24 +3,32 @@ import Footer from "./Footer"
 import Section from './Section'
 import TodolistApp from "./TodolistApp"
 
+import {useState} from 'react'
+
 import TrelloHeader from "./TrelloHeader"
 import TrelloSection from "./TrelloSection"
 import TrelloFooter from "./TrelloFooter"
-
+import Board from './Board'
 
 
 function App() {
+   const [showBoard, setShowBoard] = useState(false)
 
   return  (
-
-
     <>
     <div className="bg-[#1F1F21] text-white min-h-screen">
+     
      <TrelloHeader/>
-     <TrelloSection/>
-     <TrelloFooter/>
-   
+     
+    {showBoard ? (
+        <Board onClose={() => setShowBoard(false)} />
+      ) : (
+        <TrelloSection onFeatureClick={() => setShowBoard(true)} />
+      )}
 
+     <TrelloFooter/>
+    
+   
     </div>
     
      {/* <TodolistApp/> */}
