@@ -55,7 +55,7 @@ function Board () {
             
         </div>
       
-      <div className=' flex gap-3'>
+      <div className=' flex gap-1'>
 
           <div className='bg-[#101204]  flex flex-col gap-3 ml-12 w-70 h-40 rounded-lg mt-10  pl-4 text-white'>
             <div className='flex mt-2 '>
@@ -112,6 +112,11 @@ function Board () {
 
             </div>
             
+        </div>
+
+        <div className='bg-[#3D7DA2]  mt-10 w-40 h-10 py-1 rounded flex gap-2'>
+          <Plus className='w-5 h-5 '/>
+          <p className='text-white'>Add another list</p>
         </div>
 
       </div>

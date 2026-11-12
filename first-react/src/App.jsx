@@ -19,7 +19,7 @@ function App() {
     <div className="bg-[#1F1F21] text-white min-h-screen">
      
      <TrelloHeader/>
-     
+
     {showBoard ? (
         <Board onClose={() => setShowBoard(false)} />
       ) : (
@@ -30,8 +30,9 @@ function App() {
     
    
     </div>
+  // return ( <TodolistApp/> )
     
-     {/* <TodolistApp/> */}
+    
     {/* <div className="min-h-screen bg-[radial-gradient(ellipse_at_center,#1e3a8a_0%,#090d16_55%,#040609_100%)] text-white">
     <Header/>
     <Section/>
@@ -51,9 +52,9 @@ function App() {
       <Student name = "Byiringiro" address = "Nyabihu" isStudent={false}/> */}
       
     
-    </>
+     </>
    
-  )
+   )
 }
 
 export default App
