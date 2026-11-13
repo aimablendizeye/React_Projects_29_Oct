@@ -18,37 +18,14 @@ import {Kanban,
     Lightbulb} from 'lucide-react'
 import Dissert from './assets/Dissert.png'
 import TrelloHeader from "./TrelloHeader"
+import TodoList from "./TodoList";
 
 function Board () {
-
-  const [cards,setCards] = useState([]);
-  const [isAdding, setIsAdding] = useState(false);
-  const [text,setText] = useState("");
-
-  function handleAdd () {
-    if(text.trim() ==="") return;
-
-    setCards ([...cards,text]);
-    setText("");
-    setIsAdding (false);
-  }
-
-  function handleCancel () {
-    setText("");
-    setIsAdding(false);
-  }
-
-
+ 
  return (
-
-
-
     <>
-
     <TrelloHeader/>
  
-
-
     <div  style={{ backgroundImage: `url(${Dissert})` }}
       className='min-h-screen bg-cover bg-center bg-no-repeat pt-12'>
 
@@ -77,113 +54,22 @@ function Board () {
             
         </div>
       
-      <div className=' flex gap-1 text-sm'>
+      <div className=' flex gap-3 text-sm ml-4'>
+          <TodoList title="To Do" />
+          <TodoList title="Doing" />
+          <TodoList title="Done" />
 
-        <div className='w-72 bg-[#101204] p-3 rounded-lg ml-12 mt-10 '>
-          <h3 className='font-semibold mb-3'>To Do</h3>
+     
 
-          {cards.map ((card,index) => (
-            <div  key={index} className='bg-gray-500  rounded shodow-sm p-2 my-2 '>
-              {card}
-              
-            </div>
-      
-          ) )}
-         {isAdding ? (
-          <div>
-            <textarea autoFocus placeholder='Enter a title for this card...'
-            value ={text}
-            onChange={(e) => setText(e.target.value)}
-            className='w-full p-2 rounded shadow-sm resize-none outline-none'
-            row={3}
-                 
-            
-          />
-          <div className='flex items-center gap-2 mt-3 cursor-pointer'>
-            <button
-              onClick={handleAdd}
-              className='bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded'> Add card
-
-              </button>
-
-              <div className='bg-[#48245D] flex gap-2 p-1 rounded hover:bg-gray-800'>
-             <Lightbulb/>
-              <button>
-                Tip
-              </button>
-
-              </div>     
-
-             < X onClick= {handleCancel}
-              className='  w-5 h-5 ml-18 '
-              />
-            
-          </div>
-          </div>
-         ): (
-
-        <div className='flex gap-8 '>
-        <button
-          onClick={() =>setIsAdding(true)}
-          className='w-full text-left text-gray-600 hover:bg-gray-800 p-2 rounded  '>
-            + Add a card
-          
-          </button>
-
-          <SquareKanbanPlus className='w-5 h-5 mt-2  '/>
-
-        </div>      
-         )}
-
-        </div>
-
-          <div className='bg-[#101204]  flex flex-col gap-3 ml-12 w-70 h-40 rounded-lg mt-10  pl-4 text-white'>
-            <div className='flex mt-2'>
-                <p>Doing</p>
-                <p className='ml-40'>1</p>
-                <Ellipsis className='w-5 h-5 ml-3'/>
-            </div>
-            
-            <p className='cursor-pointer rounded px-2 py-1 mr-2 transition bg-gray-500 hover:text-white'>Code Wars</p>
-
-            <div className='flex gap-2'>
-                 <Plus className='w-5 h-5'/>
-                 <p>Add Cards</p>
-                 <SquareKanbanPlus className='w-5 h-5 ml-28'/>
-
-            </div>
-          
-            
-        </div>
-
-          <div className='bg-[#101204]  flex flex-col gap-3 ml-12 w-70 h-40 rounded-lg mt-10  pl-4 text-white'>
-            <div className='flex mt-2 '>
-                <p>Done</p>
-                <p className='ml-40'>2</p>
-                <Ellipsis className='w-5 h-5 ml-3'/>
-            </div>
-            
-            <p className='cursor-pointer rounded px-2 py-1 mr-2 transition bg-gray-500 hover:text-white'>Code Wars</p>
-            <p className='cursor-pointer rounded px-2 py-1 mr-2 transition bg-gray-500 hover:text-white'>React</p>
-
-             <div className='flex gap-2'>
-                 <Plus className='w-5 h-5'/>
-                 <p>Add Cards</p>
-                 <SquareKanbanPlus className='w-5 h-5 ml-28'/>
-
-            </div>
-            
-        </div>
-
-        <div className='bg-[#3D7DA2]  mt-10 w-40 h-10 py-1 rounded flex gap-2'>
+        <div className='bg-[#52606e]  mt-4 w-65  py-1 h-8 rounded flex gap-2'>
           <Plus className='w-5 h-5 '/>
-          <p className='text-white'>Add another list</p>
+          <textarea placeholder='Add another list'className='w-full' />
         </div>
 
       </div>
 
 
-      <div className='flex gap-4 absolute bottom-6 left-100 bg-gray-600 px-4 py-3 rounded-md text-white '>
+      <div className='flex gap-4 absolute bottom-6 left-100 bg-gray-600 px-4 py-4 rounded-md text-white '>
         <div className='flex gap-2 hover:bg-gray-400 px-2 py-1 rounded  w-fit  '>
             <Inbox className='w-5 h-5'/>
             <p>Inbox</p>
@@ -211,24 +97,11 @@ function Board () {
 
       </div>
 
-      
-
     </div>
 
-    </>
-    
-
-
-
-
+    </>  
        
  )
-    
-       
-
-
-
-
 }
 
 export default Board;

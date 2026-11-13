@@ -14,7 +14,7 @@ function TrelloHeader () {
 
             <div className='flex pl-32 gap-3'>
                 <Search className='w-4 h-4 absolute top-2 '/>
-                <input type="text" placeholder='search' className='border border-gray-400 rounded-sm pl-6 w-150 ' />
+                <input placeholder='search' className='border border-gray-400 rounded-sm pl-6 w-150 ' />
                 <button className='bg-[#669DF1] px-4 py-1 rounded-md text-black'>Create</button>
             </div>
 

@@ -19,13 +19,12 @@ function App() {
     <div className="bg-[#1F1F21] text-white min-h-screen">
      
      <TrelloHeader/>
-
     {showBoard ? (
         <Board onClose={() => setShowBoard(false)} />
       ) : (
         <TrelloSection onFeatureClick={() => setShowBoard(true)} />
       )}
-
+  
      <TrelloFooter/>
     
     </div>
