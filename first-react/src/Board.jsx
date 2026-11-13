@@ -1,4 +1,4 @@
-
+import {useState} from 'react';
 import {Kanban,
         ChevronDown,
         User,
@@ -19,12 +19,32 @@ import TrelloHeader from "./TrelloHeader"
 
 function Board () {
 
+  const [cards,setCards] = useState([]);
+  const [isAdding, setIsAdding] = useState(false);
+  const [text,setText] = useState("");
+
+  function handleAdd () {
+    if(text.trim() ==="") return;
+
+    setCards ([...cards,text]);
+    setText("");
+    setIsAdding (false);
+  }
+
+  function handleCancel () {
+    setText("");
+    setIsAdding(false);
+  }
+
 
  return (
+
+
 
     <>
 
     <TrelloHeader/>
+ 
 
 
     <div  style={{ backgroundImage: `url(${Dissert})` }}
@@ -57,23 +77,52 @@ function Board () {
       
       <div className=' flex gap-1'>
 
-          <div className='bg-[#101204]  flex flex-col gap-3 ml-12 w-70 h-40 rounded-lg mt-10  pl-4 text-white'>
-            <div className='flex mt-2 '>
-                <p>To Do</p>
-                <p className='ml-40'>2</p>
-                <Ellipsis className='w-5 h-5 ml-3'/>
-            </div>
-            
-            <p className='cursor-pointer rounded px-2 py-1 mr-2 transition bg-gray-500 hover:text-white'>Code Wars</p>
-            <p className='cursor-pointer rounded px-2 py-1 mr-2 transition bg-gray-500 hover:text-white'>React</p>
+        <div className='w-72 bg-[#101204] p-3 rounded-lg ml-12 mt-10 '>
+          <h3 className='font-semibold mb-3'>To Do</h3>
 
-            <div className='flex gap-2'>
-                 <Plus className='w-5 h-5'/>
-                 <p>Add Cards</p>
-                 <SquareKanbanPlus className='w-5 h-5 ml-28'/>
-
+          {cards.map ((card,index) => (
+            <div  key={index} className='bg-gray-500 p-2 rounded shodow-sm '>
+              {card}
+              
             </div>
+      
+
+          ) )}
+         {isAdding ? (
+          <div>
+            <textarea autoFocus placeholder='Enter a title for this card...'
+            value ={text}
+            onChange={(e) => setText(e.target.value)}
+            className='w-full p-2 rounded shadow-sm resize-none outline-none'
+            row={3}
             
+            
+            
+          />
+          <div className='flex items-center gap-2 mt-3'>
+            <button
+              onClick={handleAdd}
+              className='bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded'> Add card
+
+              </button>
+
+              <button
+              onClick= {handleCancel}
+              className='text-gray-600 hover:text-black text-xl px-2'
+              >
+                X
+              </button>
+            
+          </div>
+          </div>
+         ): (
+          <button
+          onClick={() =>setIsAdding(true)}
+          className='w-full text-left text-gray-600 hover:bg-gray-300 p-2 rounded'>+ Add a card</button>
+         )}
+
+
+
         </div>
 
           <div className='bg-[#101204]  flex flex-col gap-3 ml-12 w-70 h-40 rounded-lg mt-10  pl-4 text-white'>
