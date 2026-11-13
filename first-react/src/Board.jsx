@@ -13,7 +13,9 @@ import {Kanban,
       NotepadText,
        Dices,
       Plus,
-     SquareKanbanPlus} from 'lucide-react'
+     SquareKanbanPlus,
+      X,
+    Lightbulb} from 'lucide-react'
 import Dissert from './assets/Dissert.png'
 import TrelloHeader from "./TrelloHeader"
 
@@ -75,18 +77,17 @@ function Board () {
             
         </div>
       
-      <div className=' flex gap-1'>
+      <div className=' flex gap-1 text-sm'>
 
         <div className='w-72 bg-[#101204] p-3 rounded-lg ml-12 mt-10 '>
           <h3 className='font-semibold mb-3'>To Do</h3>
 
           {cards.map ((card,index) => (
-            <div  key={index} className='bg-gray-500 p-2 rounded shodow-sm '>
+            <div  key={index} className='bg-gray-500  rounded shodow-sm p-2 my-2 '>
               {card}
               
             </div>
       
-
           ) )}
          {isAdding ? (
           <div>
@@ -95,33 +96,44 @@ function Board () {
             onChange={(e) => setText(e.target.value)}
             className='w-full p-2 rounded shadow-sm resize-none outline-none'
             row={3}
-            
-            
+                 
             
           />
-          <div className='flex items-center gap-2 mt-3'>
+          <div className='flex items-center gap-2 mt-3 cursor-pointer'>
             <button
               onClick={handleAdd}
               className='bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded'> Add card
 
               </button>
 
-              <button
-              onClick= {handleCancel}
-              className='text-gray-600 hover:text-black text-xl px-2'
-              >
-                X
+              <div className='bg-[#48245D] flex gap-2 p-1 rounded hover:bg-gray-800'>
+             <Lightbulb/>
+              <button>
+                Tip
               </button>
+
+              </div>     
+
+             < X onClick= {handleCancel}
+              className='  w-5 h-5 ml-18 '
+              />
             
           </div>
           </div>
          ): (
-          <button
+
+        <div className='flex gap-8 '>
+        <button
           onClick={() =>setIsAdding(true)}
-          className='w-full text-left text-gray-600 hover:bg-gray-300 p-2 rounded'>+ Add a card</button>
+          className='w-full text-left text-gray-600 hover:bg-gray-800 p-2 rounded  '>
+            + Add a card
+          
+          </button>
+
+          <SquareKanbanPlus className='w-5 h-5 mt-2  '/>
+
+        </div>      
          )}
-
-
 
         </div>
 
