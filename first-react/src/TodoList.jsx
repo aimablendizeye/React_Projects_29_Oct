@@ -26,26 +26,16 @@ function handleAdd() {
     setNum(num + 1);
   }
 
-  function combine () {
-     function handleAdd() {
-    if (text.trim() === "") return;
 
-    setCards([...cards, text]);
-    setText("");
-    setIsAdding(false);
-  }
-
-  
-  function increment () {
-    setNum(num + 1);
-  }
-
-
-  }
 
   return (
     <div className="bg-[#101204] w-65 py-2 px-3 rounded-lg mt-4 self-start">
-      <h3 className="font-semibold mb-3">{title}</h3>
+
+      <div className="flex gap-40">
+           <h3 className="font-semibold mb-3">{title}</h3>
+           <p>{num}</p>
+      </div>
+     
 
       {cards.map((card, index) => (
         <div key={index} className="bg-gray-500 rounded shadow-sm p-2 my-2">
@@ -65,7 +55,10 @@ function handleAdd() {
           />
           <div className="flex items-center gap-2 mt-3 cursor-pointer">
             <button
-              onClick={handleAdd}
+              onClick={() =>{
+                handleAdd ();
+                increment();
+              } }
               className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded"
             >
               Add card
