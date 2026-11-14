@@ -6,12 +6,14 @@ import {SquareKanbanPlus,
         User,
     ChevronDown
     } from 'lucide-react';
+ import {useState} from 'react'   
  import city1 from './assets/city1.png' 
- import city2 from './assets/city2.png'      
+ import city2 from './assets/city2.png' 
+ import Detail from './Detail';     
 
 function TrelloSection ({ onFeatureClick }) {
-        
-
+         const [showDetail, setShowDetail] = useState(false);
+ 
     return (
 
     <>
@@ -52,23 +54,26 @@ function TrelloSection ({ onFeatureClick }) {
            
         </div>
 
-        <div className='flex gap-10'>
+        <div className='flex gap-10 text-sm'>
 
-            <div className='ml-12 mt-8 flex flex-col gap-2 bg-[#1C2B42] w-74 h-20 rounded-sm px-2 pb-2 '>
-            <p className='text-sm'>Workspaces</p>
-            <div className='flex gap-3'>
-                <button className='text-lg text-black bg-[#E56952] w-fit px-4  rounded-sm'>A</button>
+         <div  onClick={() => setShowDetail(!showDetail)} className='ml-12 mt-8 flex flex-col gap-2'>
+            <p className=''>Workspaces</p>
+            <div className='flex gap-3 bg-[#1C2B42] w-fit  rounded px-2 py-1 cursor-pointer'>
+                <button  className='text-sm text-black font-bold bg-[#E56952]  rounded w-fit h-fit px-3 py-1 mt-2'>A</button>
 
                 <div className='flex flex-col text-[#669CF0] text-sm'>
                     <h4>Aimable Ndizeye's </h4>
                     <h4>workspace</h4>
                 </div>
 
-                <div className='pl-12'>
-                    <ChevronDown className='w-5 h-5 '/>
+                <div className='pl-12 '>
+                    <ChevronDown className='w-5 h-5 text-[#669CF0] mt-2 '/>
                 </div>
                 
             </div>
+            <Detail isVisible={showDetail} />
+
+            
 
         </div>
 

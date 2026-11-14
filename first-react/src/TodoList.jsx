@@ -6,13 +6,14 @@ function TodoList({ title }) {
   const [cards, setCards] = useState([]);
   const [isAdding, setIsAdding] = useState(false);
   const [text, setText] = useState("");
-  const [num,setNum] = useState(0);
+  const [num,setNum] = useState(cards.length);
 
  
 function handleAdd() {
-    if (text.trim() === "") return;
+    if (text.trim() === "") return 0;
 
     setCards([...cards, text]);
+    increment();
     setText("");
     setIsAdding(false);
   }
@@ -23,7 +24,7 @@ function handleAdd() {
   }
 
    function increment () {
-    setNum(num + 1);
+    setNum(num +1);
   }
 
 
@@ -33,7 +34,7 @@ function handleAdd() {
 
       <div className="flex gap-40">
            <h3 className="font-semibold mb-3">{title}</h3>
-           <p>{num}</p>
+           <p>{cards.length}</p>
       </div>
      
 
@@ -55,10 +56,7 @@ function handleAdd() {
           />
           <div className="flex items-center gap-2 mt-3 cursor-pointer">
             <button
-              onClick={() =>{
-                handleAdd ();
-                increment();
-              } }
+              onClick={handleAdd}
               className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded"
             >
               Add card
