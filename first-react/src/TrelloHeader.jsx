@@ -6,10 +6,13 @@ function TrelloHeader () {
 
     return (
         <div className='flex gap-3 absolute text-white  '>
-            <div className='flex gap-3 pt-2 pl-2 '>
-                <LayoutGridCircles className='w-5 h-5'/>
-                <img src={trello} className='w-5 h-5' />
-                <p>Trello</p>
+            <div className='flex gap-3   '>
+                <LayoutGridCircles className='w-5 h-5 mt-4 ml-2 hover:bg-[#2C2C2E] cursor-pointer rounded '/>
+                <div className='hover:bg-[#2C2C2E] mt-3 cursor-pointer p-1 flex gap-2 rounded'>
+                       <img src={trello} className='w-5 h-5 ' />
+                       <p>Trello</p>
+                </div>
+              
             </div>
 
             <div className='flex pl-32 gap-3'>

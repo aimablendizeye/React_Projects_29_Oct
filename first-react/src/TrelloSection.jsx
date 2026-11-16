@@ -4,7 +4,8 @@ import {SquareKanbanPlus,
         LockKeyhole,
         SquarePen,
         User,
-    ChevronDown
+    ChevronDown,
+    Star
     } from 'lucide-react';
  import {useState} from 'react'   
  import city1 from './assets/city1.png' 
@@ -20,15 +21,15 @@ function TrelloSection ({ onFeatureClick }) {
     <div className='flex text-[#C5C6C9]' >
 
             <div className='flex  pt-16 flex-col pl-12 gap-2 text-gray-200'>
-             <div className='flex gap-4 hover:bg-[#2C2C2E] px-2 py-2 rounded cursor-pointer'>
+             <div className='flex gap-4 hover:bg-[#2C2C2E] px-2 py-1 rounded cursor-pointer'>
                 <SquareKanban className='w-3 h-3 mt-1'/>
                 <p className='text-sm'>Boards</p>
             </div>
-            <div className='flex gap-4 hover:bg-[#2C2C2E] px-2 py-2 w-63 rounded cursor-pointer'>
+            <div className='flex gap-4 hover:bg-[#2C2C2E] px-2 py-1 w-63 rounded cursor-pointer'>
                 <SquareKanbanPlus className='w-3 h-3 mt-1'/>
                 <p className='text-sm'>Templates</p>
             </div>
-            <div className='flex gap-4 hover:bg-[#2C2C2E] px-2 py-2 rounded cursor-pointer'>
+            <div className='flex gap-4 hover:bg-[#2C2C2E] px-2 py-1 rounded cursor-pointer'>
                 <Activity className='w-3 h-3 mt-1'/>
                 <p className='text-sm'>Home</p>
             </div>
@@ -84,12 +85,16 @@ function TrelloSection ({ onFeatureClick }) {
             </div>
             <div className='flex gap-4'>
 
-              <div className='relative'>
-                <img src={city1} alt="" onClick={onFeatureClick} className='w-50 h-30 rounded-t-sm shadow-md' />
+              <div className='relative '>
+                <img src={city1} alt="" onClick={onFeatureClick} className='w-50 h-30 rounded-t-sm shadow-md peer' />
 
                 <div className=' absolute top-20  bg-[#1F1F21] w-50 h-10 '>
                       <p className='pl-4 pt-2 text-sm'>React Project</p>
                 </div>
+
+                
+                <Star className='hidden peer-hover:block w-5 h-5 absolute top-3 right-3 text-black'/>
+                
              </div>
 
 

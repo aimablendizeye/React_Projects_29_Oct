@@ -1,22 +1,24 @@
 
-import {useState} from 'react'
+import { useState } from "react";
+import OnClick from "./OnClick";
 
 
 function OnChange () {
-
- const [name,setName] = useState("")
-
-const rendering = (event) => {
-    setName (event.target.value);
-}
-  
+   
 
     return (
-        <div className='m-20'>
-            <input type="text" value={name} onChange={rendering} className='bg-red-400 rounded '  />
-            <p>Name : {name}</p>
+        <div >
+           
+            <p>Hey there is some I hide , just hover me</p> <br />
+            <button className= " peer bg-amber-500 px-2 py-1 font-bold  rounded cursor-pointer">Hover me </button> <br />
+             
+                  <h3 className=" hidden peer-hover:block bg-white text-black p-2 rounded">This is what i was hidden</h3>
+        
+           
+           
         </div>
     )
+
 }
 
 

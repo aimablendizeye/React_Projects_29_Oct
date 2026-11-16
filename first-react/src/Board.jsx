@@ -61,15 +61,15 @@ function Board () {
 
      
 
-        <div className='bg-[#52606e]  mt-4 w-65  py-1 h-8 rounded flex gap-2'>
-          <Plus className='w-5 h-5 '/>
-          <textarea placeholder='Add another list'className='w-full' />
+        <div className='bg-[#3D7DA2]  mt-4 w-65 ml-3 py-1 h-8 rounded-lg flex gap-1 '>
+          <Plus className='w-5 h-5 mt-0.5 '/>
+          <input placeholder='Add another list'className='w-full text-sm text-white font-bold' />
         </div>
 
       </div>
 
 
-      <div className='flex gap-4 absolute bottom-6 left-100 bg-gray-600 px-4 py-4 rounded-md text-white '>
+      <div className='flex gap-4 absolute bottom-2 left-100 bg-[#18191A] px-4 py-2 rounded-md text-white '>
         <div className='flex gap-2 hover:bg-gray-400 px-2 py-1 rounded  w-fit  '>
             <Inbox className='w-5 h-5'/>
             <p>Inbox</p>

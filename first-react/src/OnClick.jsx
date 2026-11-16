@@ -1,35 +1,17 @@
 
 
-import { useState } from "react";
-
-function OnClick () {
-
-    const [name,setName] = useState();
-    const [isStudent, setIsStudent] = useState(false);
-
-    function update () {
-   setName ("Aimable")
-    }
-
-    const toggled = () => {
-     setIsStudent(!isStudent);
-    }
-
-    return (
-        <div className="m-20">
-            <h3 className="mb-4">My first learning Hooks </h3>
-
-            <h2>Name: {name}</h2>
-            <button onClick={update} className="bg-blue-600 w-fit px-2 py-1 rounded" >Click me</button>
 
 
-          <h2>Is a student: {isStudent? "Yes" : "No"}</h2>
-            <button onClick={toggled} className="bg-blue-600 w-fit px-2 py-1 rounded" > Toggle Status</button>
+function OnClick ({isVisible}) {
+ if(!isVisible) return null;
 
-
-
-        </div>
-    )
+  return (
+    <div>
+        <p>This is what I was hiding from you !</p>
+        <p>Did you find me?</p>
+    </div>
+  )
+ 
 }
 
-// export default OnClick;
+export default OnClick;
