@@ -8,7 +8,6 @@ import TodolistApp from './TodolistApp.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-
    <App />       
     {/* <OnChange/> */}
   {/* <TodolistApp/> */}

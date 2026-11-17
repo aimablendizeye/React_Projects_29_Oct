@@ -1,22 +1,29 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import OnClick from "./OnClick";
 
 
 function OnChange () {
-   
+    const [adding, setAdding] = useState(false);
+
+    function inputing () {
+        setAdding(true);
+    }
+ 
 
     return (
-        <div >
-           
-            <p>Hey there is some I hide , just hover me</p> <br />
-            <button className= " peer bg-amber-500 px-2 py-1 font-bold  rounded cursor-pointer">Hover me </button> <br />
-             
-                  <h3 className=" hidden peer-hover:block bg-white text-black p-2 rounded">This is what i was hidden</h3>
-        
-           
-           
-        </div>
+<>
+    <div className="text-white bg-black m-20 w-fit px-10 py-2 rounded-sm flex flex-col gap-3">
+        <p className="">Weekly Calendar</p>
+        <button className="bg-gray-500 rounded-sm cursor-pointer" onClick={setAdding}>Add card</button>
+    </div>
+</>
+       
+
+       
+    
+
+
     )
 
 }

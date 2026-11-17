@@ -49,12 +49,10 @@ function handleAdd() {
   >
     <input
       type="checkbox"
-      className=" appearance-none border-8 border-white w-0 opacity-0  group-hover:w-4 group:hover:h-4 rounded-full  group-hover:opacity-100 group-hover:mr-2 transition-all duration-200  checked:border-green-500"
+      className=" appearance-none border-2 border-white w-0 opacity-0  group-hover:w-4 group-hover:h-4 rounded-full  group-hover:opacity-100 group-hover:mr-2 transition-all duration-200  checked:border-green-500"
     />
-    {/* <SquarePen onClick={listOption} className='w-5 h-5 absolute right-2 hidden group-hover:block '/> */}
-
-
-    <span>{card}</span>
+    
+    <span className=" min-w-0 whitespace-pre-wrap break-words">{card}</span>
   </div>
 ))}
 
@@ -62,7 +60,7 @@ function handleAdd() {
         <div>
           <textarea
             autoFocus
-            placeholder="Enter a title for this card..."
+            placeholder="Enter a title or paste a link"
             value={text}
             onChange={(e) => setText(e.target.value)}
             className="w-full   rounded-lg bg-[#242528] shadow-sm  outline-none"

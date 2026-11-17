@@ -88,7 +88,7 @@ function TrelloSection ({ onFeatureClick }) {
               <div className='relative '>
                 <img src={city1} alt="" onClick={onFeatureClick} className='w-50 h-30 rounded-t-sm shadow-md peer' />
 
-                <div className=' absolute top-20  bg-[#1F1F21] w-50 h-10 '>
+                <div className=' absolute top-20  bg-[#1F1F21] w-50 h-10'>
                       <p className='pl-4 pt-2 text-sm'>React Project</p>
                 </div>
 
