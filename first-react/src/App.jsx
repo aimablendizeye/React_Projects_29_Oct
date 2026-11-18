@@ -16,7 +16,7 @@ function App() {
 
   return  (
     <>
-    <div className="bg-[#1F1F21] text-white min-h-screen">
+    {/* <div className="bg-[#1F1F21] text-white min-h-screen">
      
      <TrelloHeader/>
     {showBoard ? (
@@ -27,12 +27,12 @@ function App() {
   
      <TrelloFooter/>
     
-    </div>
+    </div> */}
 
     
-   {/* return
-   ( <TodolistApp/> )
-     */}
+   
+   <TodolistApp/> 
+     
     
     {/* <div className="min-h-screen bg-[radial-gradient(ellipse_at_center,#1e3a8a_0%,#090d16_55%,#040609_100%)] text-white">
     <Header/>
